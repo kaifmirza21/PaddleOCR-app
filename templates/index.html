@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR Web App</title>
+    <style>body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    div {
+        position: absolute;
+        top: 50px;
+        font-size: xx-large;
+        font-weight: 900;
+        color: #333;
+    }
+    
+    label {
+        font-weight: bold;
+        margin-right: 10px;
+    }
+    
+    select,
+    input[type="file"],
+    button {
+        margin-bottom: 10px;
+        padding: 10px;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    
+    button {
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    </style>
+</head>
+<body>
+    <div>Upload Image</div>
+    <br>
+    <form action="/upload" method="post" enctype=multipart/form-data>
+        <label for="language">Select language:</label>
+        <select name="language" id="language">
+            <option value="en">English</option>
+            <option value="ar">Arabic</option>
+            <option value="ch">Chinese</option>
+        </select>
+        <br><br>
+        <input type="file" name="uploaded_file" accept=".jpg, .jpeg, .png">
+        <button type="submit">Upload</button>
+    </form>
+
+</body>
+</html>
